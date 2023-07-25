@@ -1,4 +1,29 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+@include mobile {
+  .navbar {
+    &-brand {
+      align-self: start;
+      padding: 12px 0 16px 15px;
+    }
+    &-nav {
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 0;
+      padding: 0;
+    }
+  }
+  .nav {
+    &-item {
+      width: 50%;
+    }
+    &-link {
+      display: block;
+      font-size: 16px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      border: 1px solid $white;
+    }
+  }
+  nav .container {
+    padding: 0;
+  }
 }

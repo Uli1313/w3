@@ -1,3 +1,157 @@
-.index-title {
-  font-size: 100px;
+.banner {
+  background: no-repeat 50% 50% / cover
+    url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true");
+  @include pad {
+    background: no-repeat 50% 50% / cover
+      url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true");
+  }
+  @include mobile {
+    padding-top: 144px;
+    padding-bottom: 144px;
+    &-title {
+      font-size: 16px;
+    }
+    &-text {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+  }
+}
+.intro {
+  .material-icons-outlined {
+    font-size: 100px;
+    animation: scale 0.5s infinite alternate-reverse;
+  }
+  &-title {
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+}
+.classic {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  &-title {
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+  &-list {
+    @include pad {
+      gap: 24px 0;
+    }
+  }
+  &-img {
+    box-shadow: inset 0 0 0 8px $primary;
+    img {
+      transition: transform 0.3s;
+      &:hover {
+        transform: rotate(5deg);
+      }
+    }
+  }
+}
+.co-branding {
+  background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true");
+  &-list {
+    li {
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(0.95) rotate(5deg);
+      }
+    }
+    @include pad {
+      gap: 24px 0;
+    }
+  }
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &-title {
+      font-size: 24px;
+    }
+    &-doubleA {
+      content: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-1-sm.png?raw=true");
+    }
+    &-youth {
+      content: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2-sm.png?raw=true");
+    }
+  }
+}
+.recommend {
+  &-list-item {
+    border: 1px solid $light;
+    box-shadow: 0 2px 6px $light;
+    border-radius: 4px;
+    min-height: 511px;
+    position: relative;
+    top: 0;
+    transition: top 0.3s;
+    &:hover {
+      top: -10px;
+    }
+  }
+  @include pad {
+    &-list {
+      gap: 24px 0;
+    }
+  }
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &-title {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+}
+.contactme {
+  input::placeholder {
+    color: rgba($black, 0.2);
+  }
+  textarea::placeholder {
+    color: rgba($black, 0.2);
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"] + span {
+    background: no-repeat 0% 60%
+      url("/assets/images/check_box_outline_blank_black_18dp.svg");
+    padding-left: 20px;
+  }
+  input[type="checkbox"]:checked + span {
+    background: no-repeat 0% 60% url("/assets/images/check_box_black_18dp.svg");
+  }
+  &-btn {
+    border: none;
+    font-weight: bold;
+    padding: 16px 176px;
+    cursor: pointer;
+  }
+
+  @include pad {
+    &-content {
+      width: 75%;
+    }
+    &-title {
+      margin-bottom: 24px;
+    }
+  }
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &-content {
+      width: 100%;
+    }
+    &-title {
+      font-size: 24px;
+    }
+    &-btn {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }

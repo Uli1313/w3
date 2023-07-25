@@ -1,0 +1,20 @@
+.pagination {
+  a {
+    color: $dark-2;
+  }
+  li {
+    border-top: 1px solid $dark-2;
+    border-left: 1px solid $dark-2;
+    border-bottom: 1px solid $dark-2;
+    &:hover {
+      background: $light-3;
+    }
+  }
+  li:last-child {
+    border: 1px solid $dark-2;
+  }
+  .active {
+    background: $black;
+    color: $white;
+  }
+}

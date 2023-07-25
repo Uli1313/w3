@@ -1,0 +1,29 @@
+.category {
+  padding-left: 0;
+  padding-right: 0;
+  &-list {
+    &-item {
+      position: relative;
+      a {
+        display: block;
+        border: 1px solid $light-2;
+        &:hover {
+          &::before {
+            @include border-bottom-primary;
+          }
+        }
+        @include pad {
+          font-size: 24px;
+          padding-top: 16px;
+          padding-bottom: 16px;
+        }
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+      .active::before {
+        @include border-bottom-primary;
+      }
+    }
+  }
+}

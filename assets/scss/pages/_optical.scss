@@ -1,0 +1,51 @@
+.optical-banner {
+  height: 296px;
+  @include pad {
+    &-glasses {
+      content: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-1.png?raw=true");
+    }
+    &-person {
+      content: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-2.png?raw=true");
+    }
+  }
+  @include mobile {
+    height: 136px;
+    margin-bottom: 40px;
+  }
+}
+.optical {
+  &-link {
+    color: $black;
+    &:hover {
+      img {
+        transition: all 0.1s linear;
+        transform: scale(1.05);
+      }
+    }
+    @include mobile {
+      // 圖片撐滿
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &-list {
+    @include pad {
+      row-gap: 40px;
+    }
+  }
+  &-title {
+    @include mobile {
+      padding-bottom: 24px;
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+.colorbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}

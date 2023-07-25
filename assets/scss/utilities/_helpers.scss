@@ -1,0 +1,12 @@
+.link-white {
+  color: $white;
+  &:hover {
+    color: darken($white, 10%);
+  }
+}
+.link-primary {
+  color: $primary;
+  &:hover {
+    color: darken($primary, 10%);
+  }
+}
