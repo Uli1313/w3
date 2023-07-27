@@ -3,9 +3,8 @@
     color: $dark-2;
   }
   li {
-    border-top: 1px solid $dark-2;
-    border-left: 1px solid $dark-2;
-    border-bottom: 1px solid $dark-2;
+    border: 1px solid $dark-2;
+    border-right: none;
     &:hover {
       background: $light-3;
     }

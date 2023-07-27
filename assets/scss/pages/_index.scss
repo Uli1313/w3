@@ -50,6 +50,9 @@
         transform: rotate(5deg);
       }
     }
+    @include pad {
+      max-width: 336px;
+    }
   }
 }
 .co-branding {
