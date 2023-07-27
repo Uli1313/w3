@@ -92,6 +92,8 @@
   margin-left: calc($gutter-x / -2);
 }
 .row > * {
+  flex-shrink: 0;
+  max-width: 100%;
   width: 100%;
   padding-right: calc($gutter-x / 2);
   padding-left: calc($gutter-x / 2);
