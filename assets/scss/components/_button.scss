@@ -8,3 +8,14 @@
     background: darken($primary, 10%);
   }
 }
+.btn-dark {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: block;
+  text-align: center;
+  background: $black;
+  color: $white;
+  &:hover {
+    background: lighten($black, 10%);
+  }
+}

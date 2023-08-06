@@ -29,9 +29,18 @@
 .text-primary-dark {
   color: $primary-dark;
 }
+.text-dark-3 {
+  color: $dark-3;
+}
+.text-dark-4 {
+  color: $dark-4;
+}
 // font
 .fs-14 {
   font-size: 14px;
+}
+.fs-18 {
+  font-size: 18px;
 }
 .fs-20 {
   font-size: 20px;
@@ -115,6 +124,12 @@
 .row-cols-4 > * {
   width: 25%;
 }
+.col-5 {
+  width: calc(100% / 12 * 5);
+}
+.col-7 {
+  width: calc(100% / 12 * 7);
+}
 @include pad-la {
   .row-cols-lg-2 > * {
     width: 50%;
@@ -128,6 +143,12 @@
     width: 50%;
   }
   .row-cols-md-1 > * {
+    width: 100%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-12 {
     width: 100%;
   }
 }
@@ -150,28 +171,8 @@
 .flex-column {
   flex-direction: column;
 }
-.flex-sm-column {
-  @include mobile {
-    flex-direction: column;
-  }
-}
-.flex-sm-nowrap {
-  @include mobile {
-    flex-wrap: nowrap;
-  }
-}
-.flex-md-column {
-  @include pad {
-    flex-direction: column;
-  }
-}
 .justify-content-between {
   justify-content: space-between;
-}
-.justify-content-sm-between {
-  @include mobile {
-    justify-content: space-between;
-  }
 }
 .justify-content-center {
   justify-content: center;
@@ -182,9 +183,27 @@
 .align-items-start {
   align-items: start;
 }
-.align-items-sm-start {
-  @include mobile {
+
+@include mobile {
+  .flex-sm-column {
+    flex-direction: column;
+  }
+  .flex-sm-nowrap {
+    flex-wrap: nowrap;
+  }
+  .justify-content-sm-between {
+    justify-content: space-between;
+  }
+  .align-items-sm-start {
     align-items: start;
+  }
+}
+@include pad {
+  .d-md-flex {
+    display: flex;
+  }
+  .flex-md-column {
+    flex-direction: column;
   }
 }
 
@@ -199,8 +218,20 @@
 .pb-32 {
   padding-bottom: 32px;
 }
+
 .ps-12 {
   padding-left: 12px;
+}
+.ps-16 {
+  padding-left: 16px;
+}
+.px-12 {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+.px-24 {
+  padding-right: 24px;
+  padding-left: 24px;
 }
 .px-13 {
   padding-right: 13px;
@@ -222,6 +253,10 @@
   padding-top: 12px;
   padding-bottom: 12px;
 }
+.py-16 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
 .py-24 {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -242,8 +277,17 @@
 .me-8 {
   margin-right: 8px;
 }
+.me-12 {
+  margin-right: 12px;
+}
+.me-16 {
+  margin-right: 16px;
+}
 .me-22 {
   margin-right: 22px;
+}
+.mt-96 {
+  margin-top: 96px;
 }
 .mb-4 {
   margin-bottom: 4px;
@@ -263,12 +307,16 @@
 .mb-36 {
   margin-bottom: 36px;
 }
+.mb-40 {
+  margin-bottom: 40px;
+}
 .mb-48 {
   margin-bottom: 48px;
 }
 .mb-80 {
   margin-bottom: 80px;
 }
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -285,6 +333,12 @@
 }
 .gap-64 {
   gap: 64px;
+}
+.row-gap-24 {
+  row-gap: 24px;
+}
+.row-gap-48 {
+  row-gap: 48px;
 }
 .row-gap-80 {
   row-gap: 80px;
@@ -313,6 +367,46 @@
   overflow: hidden;
 }
 
+.border {
+  border: 1px solid;
+}
 .border-bottom {
   border-bottom: 1px solid white;
+}
+.border-light-4 {
+  border-color: $light-4;
+}
+.border-light-5 {
+  border-color: $light-5;
+}
+
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+
+.page-title {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 8px;
+    height: 100%;
+    background: $primary-light;
+  }
+  @include mobile {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
 }
